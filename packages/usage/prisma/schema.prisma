@@ -1,6 +1,6 @@
-generator custom_generator {
+generator kysely {
   provider = "npx prisma-generator-kysely"
-  output   = "../types"
+  output   = "./types"
 }
 
 datasource db {
