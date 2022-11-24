@@ -1,3 +1,3 @@
-# prisma-generator-kysely
+# Kysely Prisma Generator
 
-> This generator was bootstraped using [create-prisma-generator](https://github.com/YassinEldeeb/create-prisma-generator)
+Manage your schema with Prisma and generate types for Kysely.

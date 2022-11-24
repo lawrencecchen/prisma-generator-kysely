@@ -1,7 +1,7 @@
 {
   "name": "prisma-generator-kysely",
-  "description": "Provide a description about your generator",
-  "version": "1.0.0",
+  "description": "Prisma generator for Kysely types.",
+  "version": "0.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
@@ -35,16 +35,18 @@
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^18.0.1"
   },
-  "homepage": "Link to homepage or github readme here",
+  "homepage": "https://github.com/lawrencecchen/prisma-generator-kysely",
   "repository": {
     "type": "git",
-    "url": "Repo link here"
+    "url": "https://github.com/lawrencecchen/prisma-generator-kysely"
   },
-  "author": "Your Name <Your Email>",
+  "author": "Lawrence Chen <lawrencechen2002@gmail.com>",
   "keywords": [
     "prisma",
     "prisma2",
-    "generator"
+    "generator",
+    "kysely",
+    "kysely-codegen"
   ],
   "release": {
     "branches": [
