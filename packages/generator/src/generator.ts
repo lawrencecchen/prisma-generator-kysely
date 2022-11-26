@@ -49,44 +49,43 @@ generatorHandler({
         if (!enumMap.has(field.type)) {
           throw new Error(`Enum ${field.type} not found`);
         }
-        typeBuilder = enumMap
-          .get(field.type)!
-          .map((enumValue) => enumValue.name)
-          .join(' | ');
+        typeBuilder += field.type;
       }
       if (field.kind === 'object') {
         throw new Error('Object type not supported');
       }
-      switch (field.type) {
-        case 'BigInt':
-          typeBuilder = 'number';
-          break;
-        case 'Boolean':
-          typeBuilder = 'boolean';
-          break;
-        case 'Bytes':
-          typeBuilder = 'string';
-          break;
-        case 'DateTime':
-          typeBuilder = 'Date';
-          break;
-        case 'Decimal':
-          typeBuilder = 'number';
-          break;
-        case 'Float':
-          typeBuilder = 'number';
-          break;
-        case 'Int':
-          typeBuilder = 'number';
-          break;
-        case 'JSON':
-          typeBuilder = 'any'; // TODO: better type
-          break;
-        case 'String':
-          typeBuilder = 'string';
-          break;
-        default:
-          throw new Error(`Unknown type ${field.type}`);
+      if (field.kind !== 'enum') {
+        switch (field.type) {
+          case 'BigInt':
+            typeBuilder = 'number';
+            break;
+          case 'Boolean':
+            typeBuilder = 'boolean';
+            break;
+          case 'Bytes':
+            typeBuilder = 'string';
+            break;
+          case 'DateTime':
+            typeBuilder = 'Date';
+            break;
+          case 'Decimal':
+            typeBuilder = 'number';
+            break;
+          case 'Float':
+            typeBuilder = 'number';
+            break;
+          case 'Int':
+            typeBuilder = 'number';
+            break;
+          case 'JSON':
+            typeBuilder = 'any'; // TODO: better type
+            break;
+          case 'String':
+            typeBuilder = 'string';
+            break;
+          default:
+            throw new Error(`Unknown type ${field.type}`);
+        }
       }
 
       if (field.isList) {
