@@ -1,7 +1,7 @@
 {
   "name": "prisma-generator-kysely",
   "description": "Prisma generator for Kysely types.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {

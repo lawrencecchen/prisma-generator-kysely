@@ -37,6 +37,7 @@ generatorHandler({
       enumsStringBuilder += `export type ${
         dataModelEnum.name
       } = ${dataModelEnum.values.map(({ name }) => `"${name}"`).join(' | ')};`;
+      enumMap.set(dataModelEnum.name, dataModelEnum.values);
     }
 
     function prismaTypeToTypeScriptType(
